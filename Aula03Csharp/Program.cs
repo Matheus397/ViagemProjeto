@@ -41,14 +41,70 @@ namespace Aula03Csharp
                 Console.WriteLine($"QUAL A QUANTIDADE DE COMBUSTIVEL ATUAL DO CARRO {i + 1} ?");
                 carro.QntTanqueAtual = decimal.Parse(Console.ReadLine());
 
+                if (carro.QntTanqueAtual < 0)
+                {
+                    while (carro.QntTanqueAtual < 0)
+                    {
+                        Console.WriteLine("Insira um valor válido");
+                        Console.WriteLine();
+                        Console.WriteLine($"QUAL A QUANTIDADE DE COMBUSTIVEL ATUAL DO CARRO {i + 1} ?");
+                        carro.QntTanqueAtual = decimal.Parse(Console.ReadLine());
+                        Console.WriteLine();
+
+                    }
+
+                }
+
                 Console.WriteLine("QUAL A QUANTIDADA MAXIMA SUPORTADA NO RESERVATORIO DE COMBUSTIVEL?");
                 carro.QntTanqueCombustivel = decimal.Parse(Console.ReadLine());
+
+                if (carro.QntTanqueCombustivel < 0)
+                {
+                    while (carro.QntTanqueCombustivel < 0)
+                    {
+                        Console.WriteLine("Insira um valor válido");
+                        Console.WriteLine();
+                        Console.WriteLine("QUAL A QUANTIDADA MAXIMA SUPORTADA NO RESERVATORIO DE COMBUSTIVEL?");
+                        carro.QntTanqueCombustivel = decimal.Parse(Console.ReadLine());
+                        Console.WriteLine();
+
+                    }
+
+                }
 
                 Console.WriteLine($"QUANTOS KM/L O CARRO {i + 1} FAZ? ");
                 carro.KmPorLitro = decimal.Parse(Console.ReadLine());
 
+                if (carro.KmPorLitro < 0)
+                {
+                    while (carro.KmPorLitro < 0)
+                    {
+                        Console.WriteLine("Insira um valor válido");
+                        Console.WriteLine();
+                        Console.WriteLine($"QUANTOS KM/L O CARRO {i + 1} FAZ? ");
+                        carro.KmPorLitro = decimal.Parse(Console.ReadLine());
+                        Console.WriteLine();
+
+                    }
+
+                }
+
                 Console.WriteLine($"QUANTOS CAVALOS DE POTENCIA O CARRO {i + 1} TEM?");
                 carro.Cavalos = int.Parse(Console.ReadLine());
+
+                if (carro.Cavalos < 0)
+                {
+                    while (carro.Cavalos < 0)
+                    {
+                        Console.WriteLine("Insira um valor válido");
+                        Console.WriteLine();
+                        Console.WriteLine($"QUANTOS CAVALOS DE POTENCIA O CARRO {i + 1} TEM?");
+                        carro.Cavalos = int.Parse(Console.ReadLine());
+                        Console.WriteLine();
+
+                    }
+
+                }
 
                 Console.WriteLine("SEU FILTRO DE COMBUSTIVEL ESTÁ SUJO? (SIM/NAO)");
                 string filtro = Console.ReadLine();
@@ -89,14 +145,71 @@ namespace Aula03Csharp
                 Console.WriteLine($"QUAL A QUANTIDADE DE COMBUSTIVEL ATUAL DA MOTO {i + 1}?");
                 moto.QntTanqueAtual = decimal.Parse(Console.ReadLine());
 
+
+                if (moto.QntTanqueAtual < 0)
+                {
+                    while (moto.QntTanqueAtual < 0)
+                    {
+                        Console.WriteLine("Insira um valor válido");
+                        Console.WriteLine();
+                        Console.WriteLine($"QUAL A QUANTIDADE DE COMBUSTIVEL ATUAL DA MOTO {i + 1}?");
+                        moto.QntTanqueAtual = decimal.Parse(Console.ReadLine());
+                        Console.WriteLine();
+
+                    }
+
+                }
+
                 Console.WriteLine("QUAL A QUANTIDADA MAXIMA SUPORTADA NO RESERVATORIO DE COMBUSTIVEL?");
                 moto.QntTanqueCombustivel = decimal.Parse(Console.ReadLine());
+
+                if (moto.QntTanqueCombustivel < 0)
+                {
+                    while (moto.QntTanqueCombustivel < 0)
+                    {
+                        Console.WriteLine("Insira um valor válido");
+                        Console.WriteLine();
+                        Console.WriteLine("QUAL A QUANTIDADA MAXIMA SUPORTADA NO RESERVATORIO DE COMBUSTIVEL?");
+                        moto.QntTanqueCombustivel = decimal.Parse(Console.ReadLine());
+                        Console.WriteLine();
+
+                    }
+
+                }
 
                 Console.WriteLine("QUANTOS KM/L O VEICULO FAZ? ");
                 moto.KmPorLitro = decimal.Parse(Console.ReadLine());
 
-                Console.WriteLine($"QUANTOS CAVALOS DE POTENCIA A MOTO {i + 1} TEM?");
+                if (moto.KmPorLitro < 0)
+                {
+                    while (moto.KmPorLitro < 0)
+                    {
+                        Console.WriteLine("Insira um valor válido");
+                        Console.WriteLine();
+                        Console.WriteLine("QUANTOS KM/L O VEICULO FAZ? ");
+                        moto.KmPorLitro = decimal.Parse(Console.ReadLine());
+                        Console.WriteLine();
+
+                    }
+
+                }
+
+                Console.WriteLine($"QUANTAS CILINDRADAS DE POTENCIA A MOTO {i + 1} TEM?");
                 moto.Cilindradas = int.Parse(Console.ReadLine());
+
+                if (moto.Cilindradas < 0)
+                {
+                    while (moto.Cilindradas < 0)
+                    {
+                        Console.WriteLine("Insira um valor válido");
+                        Console.WriteLine();
+                        Console.WriteLine($"QUANTAS CILINDRADAS DE POTENCIA A MOTO {i + 1} TEM?");
+                        moto.Cilindradas = int.Parse(Console.ReadLine());
+                        Console.WriteLine();
+
+                    }
+
+                }
 
                 Console.WriteLine("SEU FILTRO DE COMBUSTIVEL ESTÁ SUJO? (SIM/NAO)");
                 string filtro2 = Console.ReadLine();
@@ -113,10 +226,26 @@ namespace Aula03Csharp
 
             Console.WriteLine("Qual o tamanha da viagem em km?");
             decimal viagem = decimal.Parse(Console.ReadLine());
+
+            if (viagem < 0)
+            {
+                while (viagem < 0)
+                {
+                    Console.WriteLine("Insira um valor válido");
+                    Console.WriteLine();
+                    Console.WriteLine("Qual o tamanha da viagem em km?");
+                    viagem = decimal.Parse(Console.ReadLine());
+                    Console.WriteLine();
+
+                }
+
+            }
+
             Console.WriteLine();
 
             Console.WriteLine("PRIMERO IRÃO OS CARROS (UM POR VEZ) E EM SEGUIDA AS MOTOS (UMA POR VEZ)");
             Console.WriteLine();
+
             Console.WriteLine("COMO ESTÁ O CLIMA? BOM OU RUIM?");
             string clima = Console.ReadLine().ToUpper();
             Console.WriteLine();
