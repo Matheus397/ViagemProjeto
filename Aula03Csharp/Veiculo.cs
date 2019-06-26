@@ -31,7 +31,7 @@ namespace Aula03Csharp
 
         public void KmLitro(decimal kmPorLitro) { KmPorLitro = kmPorLitro; }
 
-        public decimal qtdeKm() { return QntTanqueAtual * KmPorLitro; }
+        public decimal qtdeKm() {return QntTanqueAtual * KmPorLitro; }
 
         public void Abastecer(decimal litros)
         {

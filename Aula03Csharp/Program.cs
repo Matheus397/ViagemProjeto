@@ -19,16 +19,16 @@ namespace Aula03Csharp
             {
                 Carro carro = new Carro();
 
-                Console.WriteLine($"DIGITE A MARCA DO VEICULO {i + 1}: ");
+                Console.WriteLine($"DIGITE A MARCA DO CARRO {i + 1}: ");
                 carro.Marca = Console.ReadLine();
 
-                Console.WriteLine($"DIGITE O MODELO DO VEICULO {i + 1}: ");
+                Console.WriteLine($"DIGITE O MODELO DO CARRO {i + 1}: ");
                 carro.Modelo = Console.ReadLine();
 
-                Console.WriteLine($"DIGITE O PAIS DE ORIGEM DO VEICULO {i + 1}: ");
+                Console.WriteLine($"DIGITE O PAIS DE ORIGEM DO CARRO {i + 1}: ");
                 carro.PaisDeOrigem = Console.ReadLine();
 
-                Console.WriteLine("O VEICULO É FLEX? sim ou não");
+                Console.WriteLine($"O VEICULO{i + 1} É FLEX? sim ou não");
                 retorno = Console.ReadLine();
 
                 if (retorno == "SIM" || retorno == "sim")
@@ -38,41 +38,42 @@ namespace Aula03Csharp
                 else
                     carro.Flex = false;
 
-                Console.WriteLine("QUAL A QUANTIDADE DE COMBUSTIVEL ATUAL ?");
+                Console.WriteLine($"QUAL A QUANTIDADE DE COMBUSTIVEL ATUAL DO CARRO {i + 1} ?");
                 carro.QntTanqueAtual = decimal.Parse(Console.ReadLine());
 
                 Console.WriteLine("QUAL A QUANTIDADA MAXIMA SUPORTADA NO RESERVATORIO DE COMBUSTIVEL?");
                 carro.QntTanqueCombustivel = decimal.Parse(Console.ReadLine());
 
-                Console.WriteLine("QUANTOS KM/L O VEICULO FAZ? ");
+                Console.WriteLine($"QUANTOS KM/L O CARRO {i + 1} FAZ? ");
                 carro.KmPorLitro = decimal.Parse(Console.ReadLine());
 
-                Console.WriteLine("QUANTOS CAVALOS DE POTENCIA O VEICULO TEM?");
+                Console.WriteLine($"QUANTOS CAVALOS DE POTENCIA O CARRO {i + 1} TEM?");
                 carro.Cavalos = int.Parse(Console.ReadLine());
 
-                Console.WriteLine("SEU FILTO DE COMBUSTIVEL ESTÁ SUJO?(SIM/NAO)");
+                Console.WriteLine("SEU FILTRO DE COMBUSTIVEL ESTÁ SUJO? (SIM/NAO)");
                 string filtro = Console.ReadLine();
+                Console.WriteLine();
 
                 if (filtro.ToString().ToUpper() == "SIM") { carro.FiltroCombustivelEntupido = true; }
                 else
                     carro.FiltroCombustivelEntupido = false;
 
-
                 carros.Add(carro);
-                Console.WriteLine($"MARCA:{carros[i].Marca} \n MODELO: {carros[i].Modelo} \nPAIS DE ORIGEM: {carros[i].PaisDeOrigem} \n FLEX: {carros[i].Flex} \n QUANTIDADE DE COMBUSTIVEL ATUAL: {carros[i].QntTanqueAtual} \n QUANTIDADE DE COMBUSTIVEL TOTAL SUPORTADA: {carros[i].QntTanqueCombustivel} \n POTENCIA: {carros[i].Cavalos} ");
+                Console.WriteLine($" MARCA: {carros[i].Marca} \n MODELO: {carros[i].Modelo} \n PAIS DE ORIGEM: {carros[i].PaisDeOrigem} \n FLEX: {carros[i].Flex} \n QUANTIDADE DE COMBUSTIVEL ATUAL: {carros[i].QntTanqueAtual} \n QUANTIDADE DE COMBUSTIVEL TOTAL SUPORTADA: {carros[i].QntTanqueCombustivel} \n POTENCIA: {carros[i].Cavalos} CAVALOS ");
+                Console.WriteLine();
             }
 
             for (i = 0; i < 2; i++)
             {
                 Moto moto = new Moto();
 
-                Console.WriteLine("DIGITE A MARCA DO VEICULO: ");
+                Console.WriteLine($"DIGITE A MARCA DA MOTO {i + 1}: ");
                 moto.Marca = Console.ReadLine();
 
-                Console.WriteLine("DIGITE O MODELO DO VEICULO: ");
+                Console.WriteLine($"DIGITE O MODELO DA MOTO {i + 1}: ");
                 moto.Modelo = Console.ReadLine();
 
-                Console.WriteLine("DIGITE O PAIS DE ORIGEM DO VEICULO: ");
+                Console.WriteLine($"DIGITE O PAIS DE ORIGEM DA MOTO {i + 1}: ");
                 moto.PaisDeOrigem = Console.ReadLine();
 
                 Console.WriteLine("O VEICULO É FLEX? sim ou não");
@@ -85,7 +86,7 @@ namespace Aula03Csharp
                 else
                     moto.Flex = false;
 
-                Console.WriteLine("QUAL A QUANTIDADE DE COMBUSTIVEL ATUAL ");
+                Console.WriteLine($"QUAL A QUANTIDADE DE COMBUSTIVEL ATUAL DA MOTO {i + 1}?");
                 moto.QntTanqueAtual = decimal.Parse(Console.ReadLine());
 
                 Console.WriteLine("QUAL A QUANTIDADA MAXIMA SUPORTADA NO RESERVATORIO DE COMBUSTIVEL?");
@@ -94,27 +95,31 @@ namespace Aula03Csharp
                 Console.WriteLine("QUANTOS KM/L O VEICULO FAZ? ");
                 moto.KmPorLitro = decimal.Parse(Console.ReadLine());
 
-                Console.WriteLine("QUANTOS CAVALOS DE POTENCIA O VEICULO TEM?");
+                Console.WriteLine($"QUANTOS CAVALOS DE POTENCIA A MOTO {i + 1} TEM?");
                 moto.Cilindradas = int.Parse(Console.ReadLine());
 
-                Console.WriteLine("SEU FILTO DE COMBUSTIVEL ESTÁ ENTUPIDO?");
+                Console.WriteLine("SEU FILTRO DE COMBUSTIVEL ESTÁ SUJO? (SIM/NAO)");
                 string filtro2 = Console.ReadLine();
+                Console.WriteLine();
 
                 if (filtro2.ToString().ToUpper() == "SIM") { moto.FiltroCombustivelEntupido = true; }
                 else
                     moto.FiltroCombustivelEntupido = false;
                 motos1.Add(moto);
 
-                Console.WriteLine($"MARCA: {motos1[i].Marca} \n MODELO: {motos1[i].Modelo} \n PAIS DE ORIGEM: {motos1[i].PaisDeOrigem} \n FLEX: {motos1[i].Flex} \nQUANTIDADE DE COMBUSTIVEL ATUAL: {motos1[i].QntTanqueAtual} \nQUANTIDADE DE COMBUSTIVEL TOTAL SUPORTADA:{motos1[i].QntTanqueCombustivel} \n POTENCIA: {motos1[i].Cilindradas} ");
+                Console.WriteLine($" MARCA: {motos1[i].Marca} \n MODELO: {motos1[i].Modelo} \n PAIS DE ORIGEM: {motos1[i].PaisDeOrigem} \n FLEX: {motos1[i].Flex} \n QUANTIDADE DE COMBUSTIVEL ATUAL: {motos1[i].QntTanqueAtual} \n QUANTIDADE DE COMBUSTIVEL TOTAL SUPORTADA: {motos1[i].QntTanqueCombustivel} \n POTENCIA: {motos1[i].Cilindradas} CILINDRAS");
+                Console.WriteLine();
             }
 
             Console.WriteLine("Qual o tamanha da viagem em km?");
             decimal viagem = decimal.Parse(Console.ReadLine());
+            Console.WriteLine();
 
-            Console.WriteLine("PRIMERO IRÃO OS CARROS E EM SEGUIDA AS MOTOS");
-
-            Console.WriteLine("COMO ESTÁ O CLIMA BOM OU RUIM?");
+            Console.WriteLine("PRIMERO IRÃO OS CARROS (UM POR VEZ) E EM SEGUIDA AS MOTOS (UMA POR VEZ)");
+            Console.WriteLine();
+            Console.WriteLine("COMO ESTÁ O CLIMA? BOM OU RUIM?");
             string clima = Console.ReadLine().ToUpper();
+            Console.WriteLine();
 
             var kmPercorridosCarro = 0;
 
@@ -172,7 +177,7 @@ namespace Aula03Csharp
                             break;
                     }
 
-                } while (viagem > motos1[i].viajar);
+                } while (viagem > motos1[i].viajado);
 
             }
         }
